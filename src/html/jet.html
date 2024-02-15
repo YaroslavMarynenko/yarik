@@ -1,0 +1,88 @@
+<!-- jet.html -->
+<!DOCTYPE html>
+<html lang="en">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/cod.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Fredoka:wght@400;500&family=Hind+Madurai&family=Roboto&display=swap" rel="stylesheet">
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+<body>
+  
+    <div class="container">
+                        <h1>Интернет-магазин</h1>
+                    
+                    <div id="cart-icon">
+                        <lord-icon id="cart-img"
+                        src="https://cdn.lordicon.com/wpyrrmcq.json"
+                        trigger="click"
+                        style="width:30px;height:30px"
+                        secondaryColor="#007bff">
+                    </lord-icon>                 
+                        <span id="cart-count">0</span> <!-- Здесь будет отображаться количество товаров -->
+                    </div>
+                    
+
+                    <section class="productu">
+                        <div class="product" id="product1">
+                            <h2 class="product-name">Товар 1</h2>
+                            <p class="product-price">Цена: $10</p>
+                            <button id="buton" class="addToCart" data-product-name="Товар 1">Добавить в корзину</button>
+                        </div>
+
+                    <div class="product" id="product2">
+                        <h2 class="product-name">Товар 2</h2>
+                        <p class="product-price">Цена: $20</p>
+                        <button id="buton1" class="addToCart" data-product-name="Товар 2" >Добавить в корзину</button>
+                    </div>   
+    </div> 
+    <form id="checkout-form">
+        <!-- Ваша форма здесь -->
+    </form>
+    <div id="cart" class="hidden cart0">
+        
+        <h2>Корзина</h2>             
+        <ul id="cart-items"></ul>
+        <p>Общая стоимость: <span id="cart-total-display">0</span></p>
+        <a href="checkout.html"><button type="submit" id="checkout-but">Перейти до оформлення</button></a> 
+        <button id="close-cart-modal">✕</button>
+    </div>
+    <div id="order-success" style="display: none;">
+        <p>Замовлення успішно сформоване !</p>
+    </div> 
+    
+    
+</section>                  
+
+    
+
+    
+<!-- Подключение основного файла, где происходят импорты и вызовы -->
+ <script type="module" src="/src/mjs/cart.mjs" defer></script>
+<script type="module"  src="/src/mjs/main.mjs"defer></script>
+<script type="module" src="/src/mjs/telegramModule.mjs"defer></script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+    
+
+    

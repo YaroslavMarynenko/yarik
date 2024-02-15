@@ -1,0 +1,66 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/cod1.css">
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+<body>
+  
+    <h1>Оформлення замовлення</h1>
+    <form id="checkout-form">
+        <div class="bb">
+            <div class="qq">
+                                <div class="first"  >Им'я</div>
+                                <input type="text" name="name" placeholder="Им'я" required>
+            </div>
+            <div class="qq">  
+                                
+                                <div class="first"  >Прізвище:</div>
+                                <input type="text" name="surname"  placeholder="Прізвище" required>
+            </div>
+        </div>
+        <div class="first" >Email</div>
+        <input class="email" type="Email" name="email"  placeholder="Email" required>
+        <div class="first">Teл.</div>
+        <input type="tel" name="phone" placeholder="Телефон"required>
+        <button type="submit" id="checkout-button">Оформить заказ</button>
+    </form>
+   
+    
+    <div id="order-success" style="display: none;">
+        <p>Заказ успешно оформлен!</p>
+    </div>
+    <div id="cart" class="hidden cart0">
+        <h2>Ваше замовленння</h2>
+        <ul id="cart-items"></ul>
+        <p>Общая стоимость: $<span id="cart-total">0</span></p>
+        <button id="close-cart-modal">✕</button>
+    </div>
+    <div id="cart-icon">
+        <lord-icon id="cart-img"
+        src="https://cdn.lordicon.com/wpyrrmcq.json"
+        trigger="click"
+        style="width:30px;height:30px"
+        secondaryColor="#007bff">
+    </lord-icon>                 
+        <span id="cart-count">0</span> <!-- Здесь будет отображаться количество товаров -->
+    </div>
+    
+    
+     <!-- <script type="module" src="/src/mjs/telegramModule.mjs" defer ></script>  -->
+     
+     <script type="module" src="/src/mjs/cart.mjs" defer></script>
+    <script type="module" src="/src/mjs/main.mjs" defer></script>
+    <script type="module" src="/src/mjs/telegramModule.mjs" defer></script>
+
+    
+
+   
+</body>
+</html>
